@@ -8,12 +8,14 @@ import NotFound from '../src/component/NotFound/NotFound';
 import Header from './component/Header/Header';
 import OrderReview from './component/OrderReview/OrderReview';
 import Books from './component/Books/Books';
+import AuthProvider from './context/AuthProvider';
+import PrivateRoute from './component/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
     <div>
-    
-      <Router>
+    <AuthProvider>
+    <Router>
       <Header></Header>
       <Switch>
         <Route exact path="/">
@@ -22,12 +24,12 @@ function App() {
         <Route exact path="/home">
           <Home></Home>
         </Route>
-        <Route exact path="/orders">
+        <PrivateRoute exact path="/orders">
           <OrderReview></OrderReview>
-        </Route>
-        <Route exact path="/books">
+        </PrivateRoute>
+        <PrivateRoute exact path="/books">
           <Books></Books>
-        </Route>
+        </PrivateRoute>
         <Route exact path="/login">
           <Login></Login>
         </Route>
@@ -36,8 +38,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
-    
-   
+    </AuthProvider>
     </div>
   );
 }
