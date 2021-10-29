@@ -1,14 +1,43 @@
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'react-bootstrap';
-import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
+import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
+import Home from '../src/component/Home/Home';
+import Login from '../src/component/Login/Login';
+import NotFound from '../src/component/NotFound/NotFound';
+import Header from './component/Header/Header';
+import OrderReview from './component/OrderReview/OrderReview';
+import Books from './component/Books/Books';
 
 function App() {
   return (
-    <div className="App">
-    <h1>book delivery shop</h1>
-    <Button variant="primary">Button #1</Button>
+    <div>
+    
+      <Router>
+      <Header></Header>
+      <Switch>
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+        <Route exact path="/home">
+          <Home></Home>
+        </Route>
+        <Route exact path="/orders">
+          <OrderReview></OrderReview>
+        </Route>
+        <Route exact path="/books">
+          <Books></Books>
+        </Route>
+        <Route exact path="/login">
+          <Login></Login>
+        </Route>
+        <Route exact path="*">
+          <NotFound></NotFound>
+        </Route>
+      </Switch>
+    </Router>
+    
+   
     </div>
   );
 }
