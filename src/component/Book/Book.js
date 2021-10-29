@@ -14,8 +14,10 @@ const Book = (props) => {
             <div>
                 <h4>Name: {name}</h4>
                 <h4>Price: {price}</h4>
-                <Button variant="light"  onClick={() => props.handleAddToCart(props.book)}>Buy Now</Button>
-                <Button variant="light">Details</Button>
+                <div className="d-flex justify-content-between">
+                    <Button className="px-4 m-1" variant="outline-dark"  onClick={() => props.handleAddToCart(props.book)}>Buy Now</Button>
+                    <Button className="px-4 m-1" variant="outline-dark">Details</Button>
+                </div>
             </div>  
             </div> 
         </div>
