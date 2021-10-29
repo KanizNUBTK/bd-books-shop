@@ -10,6 +10,7 @@ import OrderReview from './component/OrderReview/OrderReview';
 import Books from './component/Books/Books';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute';
+import Shipping from './component/Shipping/Shipping';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
         </PrivateRoute>
         <PrivateRoute exact path="/books">
           <Books></Books>
+        </PrivateRoute>
+        <PrivateRoute exact path="/shipping">
+          <Shipping></Shipping>
         </PrivateRoute>
         <Route exact path="/login">
           <Login></Login>

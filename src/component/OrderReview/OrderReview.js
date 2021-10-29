@@ -6,6 +6,7 @@ import { removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Orders from '../Orders/Orders';
 import './OrderReview.css';
+import { Link } from 'react-router-dom';
 
 const OrderReview = () => {
     const [products] = useProducts();
@@ -37,7 +38,7 @@ const OrderReview = () => {
             </div>
             <div className="cart-container">
                 <Cart cart={cart}>
-                    <button onClick={handleProceedToShipping} className="btn-regular">Proceed to Shipping</button>
+                    <button onClick={handleProceedToShipping} className="btn-regular"><Link to="/shipping"></Link>Proceed to Shipping</button>
                 </Cart>
             </div>
             

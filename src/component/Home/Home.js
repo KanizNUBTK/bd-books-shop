@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import Books from '../Books/Books';
+import DisplayBooks from '../DisplayBooks/DisplayBooks';
 import { Carousel } from 'react-bootstrap';
 import banner1 from '../../image/banner1.cms';
 import banner2 from '../../image/banner2.jpg';
@@ -46,7 +46,7 @@ const Home = () => {
             </div>
             <div className="middile-part ">
                 <h2 className="text-center">Our Books</h2>
-                <Books></Books>
+                <DisplayBooks></DisplayBooks>
             </div>
             <div className="last-part">
               <div><Author></Author></div>
