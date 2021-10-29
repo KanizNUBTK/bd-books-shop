@@ -4,7 +4,7 @@ import DisplayBook from '../DisplayBook/DisplayBook';
 const DisplayBooks = () => {
     const [books,setBooks] = useState([]);
     useEffect(()=>{
-        fetch('/books.JSON')
+        fetch('http://localhost:5000/books')
         .then(res=>res.json())
         .then(data=>{
             setBooks(data);

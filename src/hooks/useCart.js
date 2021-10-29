@@ -8,14 +8,13 @@ const useCart = () => {
         const savedCart = getStoredCart();
         //console.log(savedCart);
         const keys = Object.keys(savedCart);
-        // fetch('http://localhost:5000/products/byKeys',{
-        //     method:'POST',
-        //     headers:{
-        //         'content-type': 'application/json'
-        //     },
-        //     body:JSON.stringify(keys)
-        // })
-            fetch('/books.JSON')
+            fetch('http://localhost:5000/books/byKeys',{
+                method:'POST',
+                headers:{
+                    'content-type': 'application/json'
+                },
+                body:JSON.stringify(keys)
+            })
             .then(res=>res.json())
             .then(products =>{
                 console.log(products);

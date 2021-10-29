@@ -11,11 +11,12 @@ const Books = () => {
     const [books,setBooks] = useState([]);
     const [cart, setCart] = useCart();
     useEffect(()=>{
-        fetch('/books.JSON')
+        fetch('http://localhost:5000/books')
         .then(res=>res.json())
         .then(data=>{
             setBooks(data);
-            console.log(data)});
+            //console.log(data)
+        });
     },[])
     const handleAddToCart = (book) => {
         const exists = cart.find(pd => pd.key === book.key);
