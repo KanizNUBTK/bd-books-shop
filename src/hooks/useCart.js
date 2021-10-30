@@ -8,7 +8,7 @@ const useCart = () => {
         const savedCart = getStoredCart();
         console.log(savedCart);
         const keys = Object.keys(savedCart);
-            fetch('http://localhost:5000/books/bykeys',{
+            fetch('https://quiet-inlet-07765.herokuapp.com/books/bykeys',{
                 method:'POST',
                 headers:{
                     'content-type': 'application/json'
