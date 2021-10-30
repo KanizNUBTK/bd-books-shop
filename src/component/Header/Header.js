@@ -17,6 +17,7 @@ const Header = () => {
                     <Nav.Link as={Link} to="/home">Home</Nav.Link>
                     <Nav.Link as={Link} to="/orders">Order Review</Nav.Link>
                     <Nav.Link as={Link} to="/books">Our Books</Nav.Link> 
+                    <Nav.Link as={Link} to="/manageAllOrders">Manage All Orders</Nav.Link> 
                 </Nav>
                 <Navbar.Text>
                     {user.email && <span style={{ color: 'white' }}>Hello {user.displayName} </span>}
