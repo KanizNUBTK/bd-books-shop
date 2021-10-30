@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import useCart from '../../hooks/useCart';
 import { addToDb } from '../../utilities/fakedb';
+import { Link, useHistory } from 'react-router-dom';
 import Book from '../Book/Book';
 import Cart from '../Cart/Cart';
 import './Books.css';
@@ -10,6 +11,7 @@ import './Books.css';
 const Books = () => {
     const [books,setBooks] = useState([]);
     const [cart, setCart] = useCart();
+    const history = useHistory();
     useEffect(()=>{
         fetch('https://quiet-inlet-07765.herokuapp.com/books')
         .then(res=>res.json())
@@ -34,7 +36,12 @@ const Books = () => {
         setCart(newCart);
         // save to local storage (for now)
         addToDb(book.key);
-
+        
+    }
+    const handlecart = () => {
+        // setCart([]);
+        // clearTheCart();
+        history.push('/orders');
     }
     return (
         <div className="shop-container">
@@ -51,6 +58,7 @@ const Books = () => {
             </div>
             <div className="cart-container">
                     <Cart cart={cart}>
+                    <button onClick={handlecart} className="btn-regular"><Link to="/orders"></Link>View your orders</button>
                     </Cart>
                 </div>
             

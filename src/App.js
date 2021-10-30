@@ -12,6 +12,7 @@ import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute';
 import Shipping from './component/Shipping/Shipping';
 import Footer from './component/Footer/Footer';
+import BookDetails from './component/BookDetails/BookDetails';
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
         </PrivateRoute>
         <PrivateRoute exact path="/books">
           <Books></Books>
+        </PrivateRoute>
+        <PrivateRoute exact path="/bookdtails/:bookId">
+          <BookDetails></BookDetails>
         </PrivateRoute>
         <PrivateRoute exact path="/shipping">
           <Shipping></Shipping>

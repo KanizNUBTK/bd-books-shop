@@ -9,8 +9,8 @@ import './OrderReview.css';
 import { Link } from 'react-router-dom';
 
 const OrderReview = () => {
-    const [products] = useProducts();
-    const [cart, setCart] = useCart(products);
+    //const [products] = useProducts();
+    const [cart, setCart] = useCart();
     const history = useHistory();
 
     const handleRemove = key => {

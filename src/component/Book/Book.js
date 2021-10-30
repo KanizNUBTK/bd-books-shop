@@ -1,9 +1,10 @@
 import React from 'react';
 import './Book.css';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Book = (props) => {
-    const {name,img,price} = props.book;
+    const {key,name,img,price} = props.book;
     return (
         <>
         <div className="border m-3 book-cart">
@@ -16,7 +17,7 @@ const Book = (props) => {
                 <h4>Price: {price}</h4>
                 <div className="d-flex justify-content-between">
                     <Button className="px-4 m-1" variant="outline-dark"  onClick={() => props.handleAddToCart(props.book)}>Buy Now</Button>
-                    <Button className="px-4 m-1" variant="outline-dark">Details</Button>
+                    <Button className="px-4 m-1" variant="outline-dark"><Link to={`/bookdtails/${key}`}>Details</Link></Button>
                 </div>
             </div>  
             </div> 
