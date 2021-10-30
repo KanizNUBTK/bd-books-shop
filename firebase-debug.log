@@ -1,0 +1,24 @@
+[debug] [2021-10-30T14:36:12.706Z] ----------------------------------------------------------------------
+[debug] [2021-10-30T14:36:12.712Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-10-30T14:36:12.713Z] CLI Version:   9.21.0
+[debug] [2021-10-30T14:36:12.714Z] Platform:      win32
+[debug] [2021-10-30T14:36:12.714Z] Node Version:  v13.14.0
+[debug] [2021-10-30T14:36:12.716Z] Time:          Sat Oct 30 2021 20:36:12 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-10-30T14:36:12.716Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-10-30T14:36:12.870Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-30T14:36:12.870Z] > authorizing via signed-in user (kaniz.m.mim@gmail.com)
+[debug] [2021-10-30T14:36:12.870Z] [iam] checking project bd-book-delivery-shop for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-10-30T14:36:12.874Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-10-30T14:36:12.874Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-30T14:36:13.222Z] <<< HTTP RESPONSE 200 {"date":"Sat, 30 Oct 2021 14:36:07 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-30T14:36:13.332Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/bd-book-delivery-shop:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-10-30T14:36:14.822Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 30 Oct 2021 14:36:09 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1161","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-30T14:36:14.825Z] > refreshing access token with scopes: []
+[debug] [2021-10-30T14:36:14.825Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-30T14:36:15.137Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Sat, 30 Oct 2021 14:36:09 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-30T14:36:15.224Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bd-book-delivery-shop [none]
+[debug] [2021-10-30T14:36:15.810Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bd-book-delivery-shop 200
