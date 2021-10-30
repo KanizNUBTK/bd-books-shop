@@ -7,7 +7,7 @@ import './Compo.css';
 
 const Compo = () => {
     return (
-        <div className="d-md-flex justify-content-between bg-info p-5">
+        <div className="d-md-flex justify-content-between bg-light p-5">
            <div  className="d-flex">
                <div>
                    <img className="compo-icon" src={car} alt="" />
