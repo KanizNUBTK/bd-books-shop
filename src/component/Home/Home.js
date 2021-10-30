@@ -6,6 +6,7 @@ import banner1 from '../../image/banner1.cms';
 import banner2 from '../../image/banner2.jpg';
 import banner3 from '../../image/banner3.jpg';
 import Author from '../Author/Author';
+import Compo from '../Compo/Compo';
 
 const Home = () => {
     return (
@@ -47,6 +48,9 @@ const Home = () => {
             <div className="middile-part ">
                 <h2 className="text-center">Our Books</h2>
                 <DisplayBooks></DisplayBooks>
+            </div>
+            <div>
+              <div><Compo></Compo></div>
             </div>
             <div className="last-part">
               <div><Author></Author></div>
