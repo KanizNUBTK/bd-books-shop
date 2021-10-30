@@ -10,15 +10,14 @@ const Shipping = () => {
     const onSubmit = data => {
         const savedCart = getStoredCart();
         data.order = savedCart;
-        // fetch('http://localhost:5000/orders',{
-        //     method: 'POST',
-        //     headers:{
-        //         'content-type': 'application/json'
-        //     },
-        //     body:JSON.stringify(data)
-        // //console.log(data)
-        // })
-        fetch('/books.JSON')
+        fetch('http://localhost:5000/orders',{
+            method: 'POST',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body:JSON.stringify(data)
+        //console.log(data)
+        })
         .then(res=>res.json())
         .then(result =>{
             if(result.insertedId){

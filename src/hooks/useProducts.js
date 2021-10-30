@@ -6,7 +6,7 @@ const useProducts = () => {
     useEffect(() => {
         fetch('https://quiet-inlet-07765.herokuapp.com/books')
             .then(res => res.json())
-            .then(data => setProducts(data.products));
+            .then(data => setProducts(data));
     }, []);
     return [products, setProducts];
 }

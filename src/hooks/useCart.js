@@ -6,15 +6,16 @@ const useCart = () => {
 
     useEffect(() => {
         const savedCart = getStoredCart();
-        //console.log(savedCart);
+        console.log(savedCart);
         const keys = Object.keys(savedCart);
-            fetch('https://quiet-inlet-07765.herokuapp.com/books/byKeys',{
-                method:'POST',
-                headers:{
-                    'content-type': 'application/json'
-                },
-                body:JSON.stringify(keys)
-            })
+            // fetch('http://localhost:5000/books',{
+            //     method:'POST',
+            //     headers:{
+            //         'content-type': 'application/json'
+            //     },
+            //     body:JSON.stringify(keys)
+            // })
+            fetch('./books.JSON')
             .then(res=>res.json())
             .then(products =>{
                 console.log(products);
@@ -31,10 +32,7 @@ const useCart = () => {
             }
             setCart(storedCart);
         }
-        })
-       
-        
-
+    })
     }, []);
 
     return [cart, setCart];

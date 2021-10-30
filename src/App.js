@@ -11,6 +11,7 @@ import Books from './component/Books/Books';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute';
 import Shipping from './component/Shipping/Shipping';
+import Footer from './component/Footer/Footer';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
           <NotFound></NotFound>
         </Route>
       </Switch>
+      <Footer></Footer>
     </Router>
     </AuthProvider>
     </div>
