@@ -13,7 +13,7 @@ const useCart = () => {
                 headers:{
                     'content-type': 'application/json'
                 },
-                body:JSON.stringify(keys)
+                body:json.stringify(keys)
             })
             .then(res=>res.json())
             .then(products =>{
