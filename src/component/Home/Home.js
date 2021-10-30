@@ -46,7 +46,7 @@ const Home = () => {
             </Carousel>
             </div>
             <div className="middile-part ">
-                <h2 className="text-center">Our Books</h2>
+                <h2 className="text-center mt-5 fw-bold fs-1">Our Books</h2>
                 <DisplayBooks></DisplayBooks>
             </div>
             <div>
