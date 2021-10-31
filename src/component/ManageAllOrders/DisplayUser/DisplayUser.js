@@ -10,7 +10,7 @@ const DisplayUser = () => {
     const {user} = useAuth();
     const [displayUser, setDisplayUser] = useState([]);
     useEffect(()=>{
-        fetch(`http://localhost:5000/orders`,{
+        fetch(`https://quiet-inlet-07765.herokuapp.com/orders`,{
             method:"GET",
             headers:{
                 'content-type': 'application/json'
@@ -25,7 +25,7 @@ const DisplayUser = () => {
     const handleDelete=id=>{
         const proceed = window.confirm('Are you sure, you want to delete a cusmoter?');
         if(proceed){
-            fetch(`http://localhost:5000/orders/${id}`,{
+            fetch(`https://quiet-inlet-07765.herokuapp.com/orders/${id}`,{
             method:'DELETE',
         })
         .then(res =>res.json())
