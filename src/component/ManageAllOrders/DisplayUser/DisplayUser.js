@@ -4,7 +4,7 @@ import { useState } from 'react';
 import useAuth from '../../../hooks/useAuth';
 import { Table } from 'react-bootstrap';
 import AddEvent from '../AddEvent/AddEvent';
-import User from '../User/User';
+
 
 const DisplayUser = () => {
     const {user} = useAuth();

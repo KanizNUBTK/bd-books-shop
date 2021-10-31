@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './BookDetails.css';
+import { Link } from 'react-router-dom';
 
 const BookDetails = () => {
     const {bookId} = useParams();
@@ -29,6 +30,9 @@ const BookDetails = () => {
                 <h3>Name: {exactData[0]?.name}</h3>
                 <h4>price: {exactData[0]?.price}</h4>
                 <p><span className="fw-bold">Descriptions:</span> {exactData[0]?.discription}</p>
+                <Link to="/books">
+                <button className="btn btn-regular btn-info text-white fw-bold">Are you want to buy this book?</button>
+                </Link> 
                 </div>
             </div>
             </div>
