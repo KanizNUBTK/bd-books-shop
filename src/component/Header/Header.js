@@ -8,10 +8,10 @@ const Header = () => {
     const { user, logOut } = useAuth();
     return (
         <div>
-            <Navbar bg="dark" variant="dark" sticky="top">
+            <Navbar bg="dark" collapseOnSelect expand="lg" variant="dark" sticky="top">
                 <Container>
                 <Navbar.Brand>bdBooks Express</Navbar.Brand>
-                <Navbar.Toggle />
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse className="justify-content-end">
                 <Nav className="me-auto">
                     <Nav.Link as={Link} to="/home">Home</Nav.Link>

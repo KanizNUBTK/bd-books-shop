@@ -4,7 +4,7 @@ import { useState } from 'react';
 import useAuth from '../../../hooks/useAuth';
 import { Table } from 'react-bootstrap';
 import AddEvent from '../AddEvent/AddEvent';
-
+import './DisplayUser.css';
 
 const DisplayUser = () => {
     const {user} = useAuth();
@@ -45,7 +45,7 @@ const DisplayUser = () => {
             </div>
             <div className="col-md-9">
                 <h1>Total Cusmoter: {displayUser?.length}</h1>
-                <Table striped bordered hover>
+                <Table striped bordered hover responsive="sm">
                     <thead>
                         <tr>
                         <th>#</th>

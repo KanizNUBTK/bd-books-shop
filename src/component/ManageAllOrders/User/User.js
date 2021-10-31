@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../../hooks/useAuth';
 import { Table } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
-import { getStoredCart } from '../../../utilities/fakedb';
+import './User.css';
 
 const User = () => {
     const {user} = useAuth();
@@ -31,7 +30,7 @@ const User = () => {
     return (
         <div>
                 <h1>Total Cusmoter: {displayUser?.length}</h1>
-                <Table striped bordered hover>
+                <Table striped bordered hover responsive="sm">
                     <thead>
                         <tr>
                         <th>#</th>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <div className="bg-dark text-white d-flex justify-content-around p-5">
+        <div className="bg-dark text-white d-md-flex justify-content-around p-5">
             <div className="ms-5">
                 <img className="foot-icon" src={icon} alt="" />
                 <p className="text-white fs-4">bdBooks Shop</p>

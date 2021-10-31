@@ -10,3 +10,11 @@
     text-decoration: none;
     color: black;
 }
+@media only screen and (max-width: 600px) {
+    .book-card{
+        padding: 20px;
+        display: grid;
+        grid-template-columns:100px 1fr;
+        grid-row-gap: 10px;
+    }
+  }

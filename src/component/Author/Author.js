@@ -5,8 +5,8 @@ import './Author.css';
 
 const Author = () => {
     return (
-        <div className="d-flex m-5">
-            <div className="border px-5 py-3 d-flex me-3">
+        <div className="d-md-flex m-md-5">
+            <div className="border px-5 py-3 d-md-flex me-md-3">
             <div>
                 <img className="author-img" src={ahmed} alt="" />
             </div>
@@ -14,7 +14,7 @@ const Author = () => {
                 <p><span className="fw-bold fs-5">Humayun Ahmed</span> was a Bangladeshi novelist, dramatist, screenwriter, filmmaker, songwriter, scholar, and professor. His breakthrough was his debut novel Nondito Noroke published in 1972. He wrote over 200 fiction and non-fiction books, many of which were bestsellers in Bangladesh.</p>
             </div>
             </div>
-            <div className="border px-5 py-3 d-flex ms-3">
+            <div className="border px-5 py-3 d-md-flex ms-md-3">
                 <div>
                     <img className="author-img" src={iqbal} alt="" />
                 </div>

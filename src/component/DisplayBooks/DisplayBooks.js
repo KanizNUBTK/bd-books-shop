@@ -12,7 +12,7 @@ const DisplayBooks = () => {
             //console.log(data)
     },[])
     return (
-        <div className="m-5">
+        <div className="m-md-5">
             <div className="book-card">
                 {
                 books.map(book=><DisplayBook
