@@ -1,0 +1,13 @@
+.dashboard{
+    height: 100vh;
+}
+.dashboard a{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+.dashboard ul{
+    margin-top: 20px;
+    list-style: none;
+}

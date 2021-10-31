@@ -15,6 +15,7 @@ import Footer from './component/Footer/Footer';
 import BookDetails from './component/BookDetails/BookDetails';
 import ManageAllOrders from './component/ManageAllOrders/ManageAllOrders';
 import AddBook from './component/AddBook/AddBook';
+import DisplayUser from './component/ManageAllOrders/DisplayUser/DisplayUser';
 
 function App() {
   return (
@@ -43,6 +44,9 @@ function App() {
         </PrivateRoute>
         <PrivateRoute exact path="/addBook">
           <AddBook></AddBook>
+        </PrivateRoute>
+        <PrivateRoute exact path="/displayUser">
+          <DisplayUser></DisplayUser>
         </PrivateRoute>
         <PrivateRoute exact path="/shipping">
           <Shipping></Shipping>

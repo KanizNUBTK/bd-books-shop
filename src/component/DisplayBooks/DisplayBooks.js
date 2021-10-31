@@ -4,7 +4,7 @@ import DisplayBook from '../DisplayBook/DisplayBook';
 const DisplayBooks = () => {
     const [books,setBooks] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/books')
+        fetch('https://quiet-inlet-07765.herokuapp.com/books')
         .then(res=>res.json())
         .then(data=>{
             setBooks(data);
