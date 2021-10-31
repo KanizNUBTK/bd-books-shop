@@ -13,7 +13,9 @@ const AddBook = () => {
         data.email=user?.email;
         axios.post('https://quiet-inlet-07765.herokuapp.com/addbook',data)
             .then(res=>{
-                console.log(res);
+                if(res.data.insertedId){
+                    alert('Thank you your product added successfull');
+                }
             })
     } 
     return (

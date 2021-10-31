@@ -6,7 +6,7 @@ const useCart = () => {
 
     useEffect(() => {
         const savedCart = getStoredCart();
-        console.log(savedCart);
+        //console.log(savedCart);
         const keys = Object.keys(savedCart);
             fetch('https://quiet-inlet-07765.herokuapp.com/books/bykeys',{
                 method:'POST',

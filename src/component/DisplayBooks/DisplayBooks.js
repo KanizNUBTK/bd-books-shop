@@ -8,7 +8,8 @@ const DisplayBooks = () => {
         .then(res=>res.json())
         .then(data=>{
             setBooks(data);
-            console.log(data)});
+            });
+            //console.log(data)
     },[])
     return (
         <div className="m-5">

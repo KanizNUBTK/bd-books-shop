@@ -9,10 +9,10 @@ const Orders = (props) => {
             <div>
             <img className="book-img" src={img} alt="" />
             </div>
-            <div className="p-3">
+            <div className="p-md-3">
                 <h4>Name : {name}</h4>
                 <h5>Price : {price}</h5>
-                <p>Quantity : {quantity}</p>
+                <h6>Purchasing Quantity of Book: {quantity}</h6>
                 <button onClick={() => handleRemove(key)} className="btn-regular btn-light px-5 py-2 border-dark">Remove</button>
             </div>
         </div>

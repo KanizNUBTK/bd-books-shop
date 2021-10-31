@@ -8,7 +8,9 @@ const Shipping = () => {
     const { register, handleSubmit, reset,formState: { errors } } = useForm();
     const { user } = useAuth();
     const onSubmit = data => {
+        console.log(data);
         const savedCart = getStoredCart();
+        console.log(savedCart);
         data.order = savedCart;
         fetch('https://quiet-inlet-07765.herokuapp.com/orders',{
             method: 'POST',
@@ -16,7 +18,6 @@ const Shipping = () => {
                 'content-type': 'application/json'
             },
             body:JSON.stringify(data)
-        //console.log(data)
         })
         .then(res=>res.json())
         .then(result =>{
@@ -24,6 +25,7 @@ const Shipping = () => {
                 alert('Order processed successfully');
                 clearTheCart();
                 reset();
+                //console.log(result);
             }
         });
     };
@@ -32,7 +34,6 @@ const Shipping = () => {
             <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
                 <h2 className="text-center">Please Enter Your Address</h2>
                 <input defaultValue={user.displayName} {...register("name")} />
-
                 <input defaultValue={user.email} {...register("email", { required: true })} />
                 {errors.email && <span className="error">This field is required</span>}
                 <input placeholder="Address" defaultValue="" {...register("address")} />

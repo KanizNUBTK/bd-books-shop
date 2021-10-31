@@ -6,12 +6,14 @@ const Cart = (props) => {
     // const total = cart.reduce(totalReducer, 0);
     let totalQuantity = 0;
     let total = 0;
+    let name;
     for (const product of cart) {
         if (!product.quantity) {
             product.quantity = 1;
         }
         total = total + product.price * product.quantity;
         totalQuantity = totalQuantity + product.quantity;
+        name = product.name;
     }
 
     const shipping = total > 0 ? 15 : 0;
