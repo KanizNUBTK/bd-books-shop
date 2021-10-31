@@ -4,7 +4,7 @@ import User from './User/User';
 
 const ManageAllOrders = () => {
     return (
-        <div className="row-md">
+        <div className="row">
             <div className="col-md-3 bg-dark">
                 <AddEvent></AddEvent>
             </div>
